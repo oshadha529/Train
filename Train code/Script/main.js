@@ -1,23 +1,27 @@
-/*Increase & decrease Local adults & current order cost change*/
+let adultcost = 0;
+let children15cost = 0;
+let children6cost = 0;
+
 function LAdult(click){
-    const LAdult=document.getElementById('LAdult');
-    const LAdultvalue=parseInt(LAdult.innerText)+click;
-    LAdult.innerText=LAdultvalue;
+    const LAdult = document.getElementById('LAdult');
+    const LAdultvalue = parseInt(LAdult.innerText)+click;
+    LAdult.innerText = LAdultvalue;
 
     if(LAdultvalue<0){
         LAdult.innerText=0;
-        Price.innerText=(0*children6cost*children15cost);
+        Price.innerText=(0 * children6cost * children15cost);
     }
 
     /*Current order cost change (Local adult) */
-        const Price=document.getElementById("currentPrice")
-        let adultPrc=2500
-        let adultcost=Price.textContent= adultPrc*LAdultvalue;
+    const Price=document.getElementById("currentPrice")
+    let adultPrc=2500
+    adultcost=Price.textContent= adultPrc*LAdultvalue;
         
-        Price.innerText=parseInt(children6cost+adultcost+children15cost);
-            
-    
+    Price.innerText=parseInt(children6cost + adultcost + children15cost);
 }
+
+
+
 
 
 /*Increase & decrease Local children under age 15 & current order cost change*/
@@ -35,11 +39,9 @@ function LChildren15(click){
     /*Current order cost change (Local children below age 15) */
     const Price=document.getElementById("currentPrice")
     let childrenprc15=1000;
-    let children15cost=Price.textContent=childrenprc15*children15value;
+    children15cost=Price.textContent=childrenprc15*children15value;
 
     Price.innerText=parseInt(children6cost+adultcost+children15cost);
-
-    
 }
 
 
@@ -57,10 +59,9 @@ function LChildren6(click){
     /*Current order cost change (Local children below age 6) */
     const Price=document.getElementById("currentPrice")
     let childrenprc6=500;
-    let  children6cost=Price.textContent=childrenprc6*LChildren6value;
+    children6cost=Price.textContent=childrenprc6*LChildren6value;
 
     Price.textContent=parseInt(children6cost+adultcost+children15cost);
-    
 }
 
 
