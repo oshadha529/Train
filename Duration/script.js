@@ -114,24 +114,32 @@ function token(click){
 const threeHrs= document.getElementById('3hours');
 const halfDay = document.getElementById('12hours');
 const fullDay = document.getElementById('24hours');
-const Price=document.getElementById("currentPrice")
+const Price=document.getElementById("currentPrice");
+threeHrs.addEventListener('click', threeHourprc);
 halfDay.addEventListener('click', halfdyprc);
 fullDay.addEventListener('click', fulldyprc);
 
 let LHalfDayPrc = 250;
 let LFullDayPrc = 500;
 
+function threeHourprc(){
+    //halfprice=Price.innerText = parseInt(LHalfDayPrc)
+    //Price.textContent = parseInt(children6cost + adultcost + children15cost + halfprice + fullprice + passCost + tokenCost);
+    Price.textContent = parseInt(0 + children6cost + adultcost + children15cost);
+}
 
 function halfdyprc(){
-    halfprice=Price.innerText = parseInt(LHalfDayPrc)
-    Price.textContent = parseInt(children6cost + adultcost + children15cost + halfprice + fullprice + passCost + tokenCost);
+    //halfprice=Price.innerText = parseInt(LHalfDayPrc)
+    //Price.textContent = parseInt(children6cost + adultcost + children15cost + halfprice + fullprice + passCost + tokenCost);
+    Price.textContent = parseInt(LHalfDayPrc + children6cost + adultcost + children15cost);
 }
 
 
 function fulldyprc(){
-    const Price=document.getElementById("currentPrice")
+    // const Price=document.getElementById("currentPrice")
 
-    fullprice=Price.innerText = parseInt(LFullDayPrc)
-    Price.textContent = parseInt(children6cost + adultcost + children15cost + halfprice + fullprice + passCost + tokenCost);
+    // fullprice=Price.innerText = parseInt(LFullDayPrc)
+    // Price.textContent = parseInt(children6cost + adultcost + children15cost + halfprice + fullprice + passCost + tokenCost);
     
+    Price.textContent = parseInt(LFullDayPrc + children6cost + adultcost + children15cost);
 }
