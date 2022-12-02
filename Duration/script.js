@@ -123,23 +123,14 @@ let LHalfDayPrc = 250;
 let LFullDayPrc = 500;
 
 function threeHourprc(){
-    //halfprice=Price.innerText = parseInt(LHalfDayPrc)
-    //Price.textContent = parseInt(children6cost + adultcost + children15cost + halfprice + fullprice + passCost + tokenCost);
     Price.textContent = parseInt(0 + children6cost + adultcost + children15cost);
 }
 
 function halfdyprc(){
-    //halfprice=Price.innerText = parseInt(LHalfDayPrc)
-    //Price.textContent = parseInt(children6cost + adultcost + children15cost + halfprice + fullprice + passCost + tokenCost);
     Price.textContent = parseInt(LHalfDayPrc + children6cost + adultcost + children15cost);
 }
 
 
 function fulldyprc(){
-    // const Price=document.getElementById("currentPrice")
-
-    // fullprice=Price.innerText = parseInt(LFullDayPrc)
-    // Price.textContent = parseInt(children6cost + adultcost + children15cost + halfprice + fullprice + passCost + tokenCost);
-    
     Price.textContent = parseInt(LFullDayPrc + children6cost + adultcost + children15cost);
 }
